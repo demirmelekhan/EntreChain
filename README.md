@@ -155,3 +155,12 @@ CDJMJTTMGMBTJH6UYQPOUB5HWOLVSNLGN23DCRCVVGEEATRAKJGQYMTC
 https://stellar.expert/explorer/testnet/contract/CDJMJTTMGMBTJH6UYQPOUB5HWOLVSNLGN23DCRCVVGEEATRAKJGQYMTC
 
 https://stellar.expert/explorer/testnet/tx/0b01053f77bca6f7df44320b9c44f6f6cbc7fde4690c2a2f642caf52eba0edcc
+
+## Video Link
+https://drive.google.com/file/d/1a6nSbowjzJ4ETvT8T7QCfoi-LN0TZfmn/view?usp=sharing
+
+## Presentation
+https://docs.google.com/presentation/d/15AkFMxwWCw-tY2LgJkOpANt8gbx9D8D9/edit?usp=sharing&ouid=104105290887187985619&rtpof=true&sd=true
+
+## Demo Link
+https://entrechain.vercel.app/
