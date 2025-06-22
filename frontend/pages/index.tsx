@@ -9,9 +9,9 @@ export default function HomePage() {
   const [isConnecting, setIsConnecting] = useState(false);
   const [error, setError] = useState<string>("");
   const router = useRouter();
-
   // Check if wallet is already connected on component mount
-  useEffect(() => {    const stored = FreighterWallet.getStoredWallet();
+  useEffect(() => {
+    const stored = FreighterWallet.getStoredWallet();
     if (stored && stored.isConnected) {
       setWalletState(stored);
       // Auto redirect to projects page if already connected
