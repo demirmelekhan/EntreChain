@@ -1,0 +1,20 @@
+{
+  "name": "entrechain-backend",
+  "version": "1.0.0",
+  "description": "EntreChain Backend Server",
+  "main": "index.js",
+  "scripts": {
+    "start": "node dist/index.js",
+    "dev": "ts-node src/index.ts",
+    "build": "tsc"
+  },
+  "dependencies": {
+    "passkey-kit": "^0.10.24",
+    "dotenv": "^16.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0",
+    "ts-node": "^10.0.0"
+  }
+}
