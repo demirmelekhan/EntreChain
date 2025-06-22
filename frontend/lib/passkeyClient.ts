@@ -35,3 +35,57 @@ const sac = new SACClient({
  * A SAC client for the native XLM asset.
  */
 export const native = sac.getSACClient(NATIVE_CONTRACT_ADDRESS);
+
+/**
+ * API wrapper functions for easier client-side access to our backend endpoints
+ */
+
+/**
+ * A wrapper function so it's easier for our client-side code to access the
+ * `/api/send` endpoint we have created.
+ *
+ * @param xdr - The base64-encoded, signed transaction. This transaction
+ * **must** contain a Soroban operation
+ * @returns JSON object containing the RPC's response
+ */
+export async function send(xdr: string) {
+  return fetch("/api/send", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      xdr,
+    }),
+  }).then(async (res) => {
+    if (res.ok) return res.json();
+    else throw await res.text();
+  });
+}
+
+/**
+ * A wrapper function so it's easier for our client-side code to access the
+ * `/api/contract/[signer]` endpoint we have created.
+ *
+ * @param signer - The passkey ID we want to find an associated smart wallet for
+ * @returns The contract address to which the specified signer has been added
+ */
+export async function getContractId(signer: string) {
+  return fetch(`/api/contract/${signer}`).then(async (res) => {
+    if (res.ok) return res.text();
+    else throw await res.text();
+  });
+}
+
+/**
+ * A wrapper function so it's easier for our client-side code to access the
+ * `/api/fund/[address]` endpoint we have created.
+ *
+ * @param address - The contract address to fund on the Testnet
+ */
+export async function fundContract(address: string) {
+  return fetch(`/api/fund/${address}`).then(async (res) => {
+    if (res.ok) return res.json();
+    else throw await res.text();
+  });
+}
